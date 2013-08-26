@@ -50,21 +50,6 @@ $LANG = array(
 'L_SATURDAY'					=> 'субота',
 'L_SUNDAY'						=> 'воскресенье',
 
-# class.plx.capcha.php
-'L_LAST'						=> 'последняя',
-'L_FIRST'						=> 'первая',
-'L_SECOND'						=> 'вторая',
-'L_THIRD'						=> 'третья',
-'L_FOURTH'						=> 'четвертая',
-'L_FIFTH'						=> 'пятая',
-'L_SIXTH'						=> 'шестая',
-'L_SEVENTH'						=> 'седьмая',
-'L_EIGTH'						=> 'восьмая',
-'L_NINTH'						=> 'девятая',
-'L_TENTH'						=> 'десятая',
-'L_NTH'							=> 'и',
-'L_CAPCHA_QUESTION'				=> 'Напечатйте, какая <span class="capcha-letter">%s</span> буква в этом тексте <span class="capcha-word">%s</span>?',
-
 # class.plx.utils.php
 'L_WRITE_ACCESS'				=> '%s имеет доступ на запись',
 'L_WRITE_NOT_ACCESS'			=> '%s не имеет доступ на запись или не существует',

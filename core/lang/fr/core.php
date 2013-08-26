@@ -50,21 +50,6 @@ $LANG = array(
 'L_SATURDAY'					=> 'samedi',
 'L_SUNDAY'						=> 'dimanche',
 
-# class.plx.capcha.php
-'L_LAST'						=> 'dernière',
-'L_FIRST'						=> 'première',
-'L_SECOND'						=> 'deuxième',
-'L_THIRD'						=> 'troisième',
-'L_FOURTH'						=> 'quatrième',
-'L_FIFTH'						=> 'cinquième',
-'L_SIXTH'						=> 'sizième',
-'L_SEVENTH'						=> 'septième',
-'L_EIGTH'						=> 'huitième',
-'L_NINTH'						=> 'neuvième',
-'L_TENTH'						=> 'dixième',
-'L_NTH'							=> 'ème',
-'L_CAPCHA_QUESTION'				=> 'Quelle est la <span class="capcha-letter">%s</span> lettre du mot <span class="capcha-word">%s</span> ?',
-
 # class.plx.utils.php
 'L_WRITE_ACCESS'				=> '%s est accessible en écriture',
 'L_WRITE_NOT_ACCESS'			=> '%s n\'est pas accessible en écriture ou n\'existe pas',

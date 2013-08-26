@@ -36,7 +36,6 @@ class plxMotor {
 	public $plxGlob_coms = null; # Objet plxGlob des commentaires
 	public $plxRecord_arts = null; # Objet plxRecord des articles
 	public $plxRecord_coms = null; # Objet plxRecord des commentaires
-	public $plxCapcha = null; # Objet plxCapcha
 	public $plxErreur = null; # Objet plxErreur
 	public $plxPlugins = null; # Objet plxPlugins
 
@@ -312,13 +311,11 @@ class plxMotor {
 			# Récupération des commentaires
 			$this->getCommentaires('/^'.$this->cible.'.[0-9]{10}-[0-9]+.xml$/',$this->mapTri($this->tri_coms));
 			$this->template=$this->plxRecord_arts->f('template');
-			if($this->aConf['capcha']) $this->plxCapcha = new plxCapcha(); # Création objet captcha
 		}
 		elseif($this->mode == 'preview') {
 			$this->mode='article';
 			$this->plxRecord_arts = new plxRecord($_SESSION['preview']);
 			$this->template=$this->plxRecord_arts->f('template');
-			if($this->aConf['capcha']) $this->plxCapcha = new plxCapcha(); # Création objet captcha
 		}
 
 		# Hook plugins
@@ -786,43 +783,39 @@ class plxMotor {
 	public function newCommentaire($artId,$content) {
 		# Hook plugins
 		if(eval($this->plxPlugins->callHook('plxMotorNewCommentaire'))) return;
-		# On verifie que le capcha est correct
-		if($this->aConf['capcha'] == 0 OR $_SESSION['capcha'] == sha1($content['rep'])) {
-			if(!empty($content['name']) AND !empty($content['content'])) { # Les champs obligatoires sont remplis
-				$comment=array();
-				$comment['type'] = 'normal';
-				$comment['author'] = plxUtils::strCheck(trim($content['name']));
-				$comment['content'] = plxUtils::strCheck(trim($content['content']));
-				# On verifie le mail
-				$comment['mail'] = (plxUtils::checkMail(trim($content['mail'])))?trim($content['mail']):'';
-				# On verifie le site
-				$comment['site'] = (plxUtils::checkSite($content['site'])?$content['site']:'');
-				# On recupere l'adresse IP du posteur
-				$comment['ip'] = plxUtils::getIp();
-				# On genere le nom du fichier selon l'existence ou non d'un fichier du meme nom
-				$time = time();
-				$i = 0;
-				do { # On boucle en testant l'existence du fichier (cas de plusieurs commentaires/sec pour un article)
-					$i++;
-					if($this->aConf['mod_com']) # On modere le commentaire => underscore
-						$comment['filename'] = '_'.$artId.'.'.$time.'-'.$i.'.xml';
-					else # On publie le commentaire directement
-						$comment['filename'] =$artId.'.'.$time.'-'.$i.'.xml';
-				} while(file_exists($comment['filename']));
-				# On peut creer le commentaire
-				if($this->addCommentaire($comment)) { # Commentaire OK
-					if($this->aConf['mod_com']) # En cours de moderation
-						return 'mod';
-					else # Commentaire publie directement, on retourne son identifiant
-						return 'c'.$time.'-'.$i;
-				} else { # Erreur lors de la création du commentaire
-					return L_NEWCOMMENT_ERR;
-				}
-			} else { # Erreur de remplissage des champs obligatoires
-				return L_NEWCOMMENT_FIELDS_REQUIRED;
+
+		if(!empty($content['name']) AND !empty($content['content'])) { # Les champs obligatoires sont remplis
+			$comment=array();
+			$comment['type'] = 'normal';
+			$comment['author'] = plxUtils::strCheck(trim($content['name']));
+			$comment['content'] = plxUtils::strCheck(trim($content['content']));
+			# On verifie le mail
+			$comment['mail'] = (plxUtils::checkMail(trim($content['mail'])))?trim($content['mail']):'';
+			# On verifie le site
+			$comment['site'] = (plxUtils::checkSite($content['site'])?$content['site']:'');
+			# On recupere l'adresse IP du posteur
+			$comment['ip'] = plxUtils::getIp();
+			# On genere le nom du fichier selon l'existence ou non d'un fichier du meme nom
+			$time = time();
+			$i = 0;
+			do { # On boucle en testant l'existence du fichier (cas de plusieurs commentaires/sec pour un article)
+				$i++;
+				if($this->aConf['mod_com']) # On modere le commentaire => underscore
+					$comment['filename'] = '_'.$artId.'.'.$time.'-'.$i.'.xml';
+				else # On publie le commentaire directement
+					$comment['filename'] =$artId.'.'.$time.'-'.$i.'.xml';
+			} while(file_exists($comment['filename']));
+			# On peut creer le commentaire
+			if($this->addCommentaire($comment)) { # Commentaire OK
+				if($this->aConf['mod_com']) # En cours de moderation
+					return 'mod';
+				else # Commentaire publie directement, on retourne son identifiant
+					return 'c'.$time.'-'.$i;
+			} else { # Erreur lors de la création du commentaire
+				return L_NEWCOMMENT_ERR;
 			}
-		} else { # Erreur de verification capcha
-			return L_NEWCOMMENT_ERR_ANTISPAM;
+		} else { # Erreur de remplissage des champs obligatoires
+			return L_NEWCOMMENT_FIELDS_REQUIRED;
 		}
 	}
 

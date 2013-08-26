@@ -50,21 +50,6 @@ $LANG = array(
 'L_SATURDAY'					=> 'zaterdag',
 'L_SUNDAY'						=> 'zondag',
 
-# class.plx.capcha.php
-'L_LAST'						=> 'laatste',
-'L_FIRST'						=> 'eerste',
-'L_SECOND'						=> 'tweede',
-'L_THIRD'						=> 'derde',
-'L_FOURTH'						=> 'vierde',
-'L_FIFTH'						=> 'vijfde',
-'L_SIXTH'						=> 'zesde',
-'L_SEVENTH'						=> 'zevende',
-'L_EIGTH'						=> 'achste',
-'L_NINTH'						=> 'negende',
-'L_TENTH'						=> 'tiende',
-'L_NTH'							=> 'de',
-'L_CAPCHA_QUESTION'				=> 'Welke is de <span class="capcha-letter">%s</span> letter van het woord <span class="capcha-word">%s</span> ?',
-
 # class.plx.utils.php
 'L_WRITE_ACCESS'				=> '%s is toegankelijk met schrijfrechten',
 'L_WRITE_NOT_ACCESS'			=> '%s is niet toegankelijk met schrijfrechten of bestaat niet',

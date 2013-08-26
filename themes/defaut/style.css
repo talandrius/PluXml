@@ -518,15 +518,6 @@ input[type=reset]:hover {
 	border: 1px solid #bbb;
 }
 
-.capcha-letter,
-.capcha-word {
-	font-weight: bold;
-}
-
-#id_rep {
-	width: auto;
-}
-
 /* ---------- RESPONSIVE DESIGN ---------- */
 
 @media screen and (max-width:768px) {

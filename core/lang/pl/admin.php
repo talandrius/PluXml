@@ -285,7 +285,6 @@ $LANG = array(
 'L_CONFIG_ADVANCED_URL_REWRITE_ALERT'						=> '<span class="alert">Baczność .htaccess jest obecna w katalogu głównym PluXml. Poprzez umożliwienie przepisywania URL ten plik zostanie zmodyfikowany</span>',
 'L_CONFIG_ADVANCED_GZIP'									=> 'Activar a compressão GZIP',
 'L_CONFIG_ADVANCED_GZIP_HELP'								=> 'Permite de comprimir as páginas afim de economizar os dados transferidos entre o servidor e o seu computer, em consequência aumenta a carga do servidor ! Desactive se o sue web-site fôr muito visitado',
-'L_CONFIG_ADVANCED_CAPCHA'									=> 'Activar o capcha anti-spam',
 'L_CONFIG_ADVANCED_ADMIN_KEY'								=> 'Chave de administração (URLS privadas)',
 'L_CONFIG_ADVANCED_KEY_HELP'								=> 'Esvaziar o campo afim de regenerar a chave novamente',
 'L_CONFIG_ADVANCED_USERFOLDERS'								=> 'Utilizar uma pasta imagens e documentos diferente para cada utilizador',

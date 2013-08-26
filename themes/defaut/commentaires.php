@@ -64,14 +64,6 @@
 				<p class="com-alert">
 					<?php $plxShow->comMessage(); ?>
 				</p>
-				<?php if($plxShow->plxMotor->aConf['capcha']): ?>
-				<p>
-					<label for="id_rep"><strong><?php echo $plxShow->lang('ANTISPAM_WARNING') ?></strong> :</label>
-				</p>
-				<p>
-					<?php $plxShow->capchaQ(); ?> : <input id="id_rep" name="rep" type="text" size="2" maxlength="1" />
-				</p>
-				<?php endif; ?>
 				<p>
 					<input type="submit" value="<?php $plxShow->lang('SEND') ?>" />
 				</p>

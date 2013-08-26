@@ -1332,34 +1332,6 @@ class plxShow {
 	}
 
 	/**
-	 * Méthode qui affiche la question du capcha
-	 *
-	 * @return	stdout
-	 * @scope	global
-	 * @author	Florent MONTHEL, Stephane F.
-	 **/
-	public function capchaQ() {
-		# Hook Plugins
-		if(eval($this->plxMotor->plxPlugins->callHook('plxShowCapchaQ'))) return;
-		echo $this->plxMotor->plxCapcha->q();
-	}
-
-	/**
-	 * Méthode qui affiche la réponse du capcha cryptée en sha1
-	 * DEPRECATED
-	 *
-	 * @return	stdout
-	 * @scope	global
-	 * @author	Florent MONTHEL, Stephane F.
-	 **/
-	public function capchaR() {
-		# Hook Plugins
-		if(eval($this->plxMotor->plxPlugins->callHook('plxShowCapchaR'))) return;
-		echo $this->plxMotor->plxCapcha->r();
-
-	}
-
-	/**
 	 * Méthode qui affiche le message d'erreur de l'objet plxErreur
 	 *
 	 * @return	stdout

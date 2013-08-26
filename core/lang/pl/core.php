@@ -50,21 +50,6 @@ $LANG = array(
 'L_SATURDAY'					=> 'sobota',
 'L_SUNDAY'						=> 'niedziela',
 
-# class.plx.capcha.php
-'L_LAST'						=> 'ostatnią',
-'L_FIRST'						=> 'pierwszą',
-'L_SECOND'						=> 'drugą',
-'L_THIRD'						=> 'trzecią',
-'L_FOURTH'						=> 'czwartą',
-'L_FIFTH'						=> 'piątą',
-'L_SIXTH'						=> 'szóstą',
-'L_SEVENTH'						=> 'siódmą',
-'L_EIGTH'						=> 'ósmą',
-'L_NINTH'						=> 'dziewiątą',
-'L_TENTH'						=> 'dziesiątą',
-'L_NTH'							=> 'nth',
-'L_CAPCHA_QUESTION'				=> 'Przepisz <span class="capcha-letter">%s</span> literę z palety <span class="capcha-word">%s</span>?',
-
 # class.plx.utils.php
 'L_WRITE_ACCESS'				=> '%s posiada możliwy zapis',
 'L_WRITE_NOT_ACCESS'			=> '%s nie jest zapisywalny lub nie istnieje',

@@ -285,7 +285,6 @@ $LANG = array(
 'L_CONFIG_ADVANCED_URL_REWRITE_ALERT'						=> '<span class="alert">Cuidado un archivo .htaccess ya existe en la raíz de su PluXml. Al activar la re-escritura de urls, este archivo se modifica</span>',
 'L_CONFIG_ADVANCED_GZIP'									=> 'Activar la compresión GZIP',
 'L_CONFIG_ADVANCED_GZIP_HELP'								=> 'Permite comprimir las páginas para ahorrar ancho de banda, sin embargo puede aumentar la carga del procesador',
-'L_CONFIG_ADVANCED_CAPCHA'									=> 'Activar el captcha anti-spam',
 'L_CONFIG_ADVANCED_ADMIN_KEY'								=> 'Contraseña Administración (URLs privadas)',
 'L_CONFIG_ADVANCED_KEY_HELP'								=> 'Vaciar este campo para generar la clave',
 'L_CONFIG_ADVANCED_USERFOLDERS'								=> 'Utilizar una carpeta Imagen y archivos diferentes para cada usuario',

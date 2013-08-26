@@ -29,7 +29,6 @@ session_start();
 include(PLX_CORE.'lib/class.plx.date.php');
 include(PLX_CORE.'lib/class.plx.glob.php');
 include(PLX_CORE.'lib/class.plx.utils.php');
-include(PLX_CORE.'lib/class.plx.capcha.php');
 include(PLX_CORE.'lib/class.plx.erreur.php');
 include(PLX_CORE.'lib/class.plx.record.php');
 include(PLX_CORE.'lib/class.plx.motor.php');

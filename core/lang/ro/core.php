@@ -50,21 +50,6 @@ $LANG = array(
 'L_SATURDAY'					=> 'sambata',
 'L_SUNDAY'						=> 'duminica',
 
-# class.plx.capcha.php
-'L_LAST'						=> 'ultima',
-'L_FIRST'						=> 'prima',
-'L_SECOND'						=> 'a doua',
-'L_THIRD'						=> 'a treia',
-'L_FOURTH'						=> 'a patra',
-'L_FIFTH'						=> 'a cincia',
-'L_SIXTH'						=> 'a şasea',
-'L_SEVENTH'						=> 'a şaptea',
-'L_EIGTH'						=> 'a opta',
-'L_NINTH'						=> 'a noua',
-'L_TENTH'						=> 'a zecea',
-'L_NTH'							=> 'lea',
-'L_CAPCHA_QUESTION'				=> 'Care este <span class="capcha-letter">%s</span> litera a cuvantului <span class="capcha-word">%s</span> ?',
-
 # class.plx.utils.php
 'L_WRITE_ACCESS'				=> '%s are acces de scriere',
 'L_WRITE_NOT_ACCESS'			=> '%s nu are acces de scriere sau nu există',

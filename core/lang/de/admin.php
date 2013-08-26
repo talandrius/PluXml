@@ -286,7 +286,6 @@ $LANG = array(
 'L_CONFIG_ADVANCED_URL_REWRITE_ALERT'				=> '<span class="alert">Achtung! Es ist bereits eine .htaccess Datei im Grundverzeichnis von PluXml vorhanden. Diese Datei wird beim Aktivieren modifiziert.</span>',
 'L_CONFIG_ADVANCED_GZIP'							=> 'GZIP Kompression aktivieren',
 'L_CONFIG_ADVANCED_GZIP_HELP'						=> 'Komprimierung spart Bandreite, erhöht aber die Prozessorauslastung des Servers.',
-'L_CONFIG_ADVANCED_CAPCHA'							=> 'ANTI-SPAM Kontrolle aktivieren',
 'L_CONFIG_ADVANCED_ADMIN_KEY'						=> 'Adminschlüssel (private URLs)',
 'L_CONFIG_ADVANCED_KEY_HELP'						=> 'Feld leeren um neuen Schlüssel zu generieren',
 'L_CONFIG_ADVANCED_USERFOLDERS'						=> 'Für jeden Benutzer einen eigenen Daten- und Bildordner verwenden',
